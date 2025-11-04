@@ -1,11 +1,12 @@
+import devKeys from "./dev.js";
+import prodKeys from "./prod.js";
+
 let Keys;
 
 if (process.env.NODE_ENV === "production") {
-  const prodKeys = await import("./prod.js");
-  Keys = prodKeys.default;
+  Keys = prodKeys;
 } else {
-  const devKeys = await import("./dev.js");
-  Keys = devKeys.default;
+  Keys = devKeys;
 }
 
 export default Keys;
