@@ -1,6 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "engine": {
@@ -8,11 +9,17 @@
     "npm": "10.9.3"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "cookie-session": "^2.1.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1",
+    "nodemon": "^3.1.10",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
